@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaming Store</title>
+  <link rel="stylesheet" href="home.css">
+  <style>
+    /* Additional CSS for game details */
+    .game-details {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .game-details p {
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Gaming Space</h1>
+    <div class="games">
+      <div class="game">
+        <img src="free fire.jpg" alt="Free Fire">
+        <h2>Free Fire</h2>
+        <button onclick="toggleDetails('free-fire-details')">About</button>
+        <button onclick="installGame('Free Fire')">Install</button>
+        <div id="free-fire-details" class="game-details">
+          <h3>Game Overview</h3>
+          <p>Free Fire is a popular battle royale game developed by Garena. It features fast-paced gameplay and intense firefights. Players drop into a battlefield and fight to be the last one standing.</p>
+          <h3>Key Features</h3>
+          <ul>
+            <li>Multiple characters with unique abilities</li>
+            <li>Variety of weapons and equipment</li>
+            <li>Team-based gameplay</li>
+          </ul>
+          <h3>Platforms</h3>
+          <p>Android, iOS</p>
+        </div>
+      </div>
+      <div class="game">
+        <img src="pubg.jpg" alt="PUBG">
+        <h2>PUBG</h2>
+        <button onclick="toggleDetails('pubg-details')">About</button>
+        <button onclick="installGame('PUBG')">Install</button>
+        <div id="pubg-details" class="game-details">
+          <h3>Game Overview</h3>
+          <p>PUBG (PlayerUnknown's Battlegrounds) is a widely acclaimed battle royale game. It is known for its realistic graphics, large maps, and tactical gameplay. Players parachute onto an island and scavenge for weapons and equipment to eliminate opponents.</p>
+          <h3>Key Features</h3>
+          <ul>
+            <li>Realistic shooting mechanics</li>
+            <li>Large-scale multiplayer battles</li>
+            <li>Varied game modes including classic and arcade</li>
+          </ul>
+          <h3>Platforms</h3>
+          <p>PC, Xbox, PlayStation, Mobile</p>
+        </div>
+      </div>
+      <div class="game">
+        <img src="codm.png" alt="Call of Duty">
+        <h2>Call Of Duty</h2>
+        <button onclick="toggleDetails('cod-details')">About</button>
+        <button onclick="installGame('Call of Duty')">Install</button>
+        <div id="cod-details" class="game-details">
+          <h3>Game Overview</h3>
+          <p>Call of Duty is a long-running first-person shooter franchise. Call of Duty Mobile brings the series' signature gameplay to mobile devices, featuring multiple game modes, iconic maps, and customizable loadouts.</p>
+          <h3>Key Features</h3>
+          <ul>
+            <li>Classic Call of Duty multiplayer experience</li>
+            <li>Battle Royale mode</li>
+            <li>Zombies mode for cooperative play</li>
+          </ul>
+          <h3>Platforms</h3>
+          <p>Android, iOS</p>
+        </div>
+      </div>
+      <div class="game">
+        <img src="temple run.jpeg" alt="Temple Run">
+        <h2>Temple Run</h2>
+        <button onclick="toggleDetails('temple-run-details')">About</button>
+        <button onclick="installGame('Temple Run')">Install</button>
+        <div id="temple-run-details" class="game-details">
+          <h3>Game Overview</h3>
+          <p>Temple Run is a popular endless running game where players navigate obstacles and collect coins in an ancient temple setting. The game is known for its addictive gameplay and simple controls.</p>
+          <h3>Key Features</h3>
+          <ul>
+            <li>Simple swipe-based controls</li>
+            <li>Various power-ups and special abilities</li>
+            <li>Dynamic environment with changing obstacles</li>
+          </ul>
+          <h3>Platforms</h3>
+          <p>Android, iOS</p>
+        </div>
+      </div>
+      <div class="game">
+        <img src="mine.jpeg" alt="Minecraft">
+        <h2>Minecraft</h2>
+        <button onclick="toggleDetails('minecraft-details')">About</button>
+        <button onclick="installGame('Minecraft')">Install</button>
+        <div id="minecraft-details" class="game-details">
+          <h3>Game Overview</h3>
+          <p>Minecraft is a sandbox video game where players can build constructions out of textured cubes in a 3D procedurally generated world. It has different game modes including survival, creative, and adventure.</p>
+          <h3>Key Features</h3>
+          <ul>
+            <li>Endless creative possibilities</li>
+            <li>Multiplayer mode for collaborative building</li>
+            <li>Mods and custom maps support</li>
+          </ul>
+          <h3>Platforms</h3>
+          <p>PC, Xbox, PlayStation, Nintendo Switch, Mobile</p>
+        </div>
+      </div>
+      <div class="game">
+        <img src="shadow.jpeg" alt="Shadow Fight">
+        <h2>Shadow Fight</h2>
+        <button onclick="toggleDetails('shadow-fight-details')">About</button>
+        <button onclick="installGame('Shadow Fight')">Install</button>
+        <div id="shadow-fight-details" class="game-details">
+          <h3>Game Overview</h3>
+          <p>Shadow Fight is a popular fighting game series where players control martial artists in combat against opponents. It combines elements of role-playing with classic fighting game mechanics.</p>
+          <h3>Key Features</h3>
+          <ul>
+            <li>Unique fighting styles and abilities</li>
+            <li>Story mode and tournaments</li>
+            <li>Customizable characters with equipment</li>
+          </ul>
+          <h3>Platforms</h3>
+          <p>Android, iOS</p>
+        </div>
+      </div>
+      <!-- Add more games with similar structure -->
+    </div>
+  </div>
+
+  <script src="home.js"></script>
+  <script>
+    function toggleDetails(gameId) {
+      var details = document.getElementById(gameId);
+      if (details.style.display === "block") {
+        details.style.display = "none";
+      } else {
+        details.style.display = "block";
+      }
+    }
+
+    function installGame(gameName) {
+      // Redirect to official install page based on game name
+      switch (gameName) {
+        case 'Free Fire':
+          window.location.href = 'https://freefire.com/download';
+          break;
+        case 'PUBG':
+          window.location.href = 'https://www.pubg.com/download';
+          break;
+        case 'Call of Duty':
+          window.location.href = 'https://www.callofduty.com/mobile/download';
+          break;
+        case 'Temple Run':
+          window.location.href = 'https://templerun.com/install';
+          break;
+        case 'Minecraft':
+          window.location.href = 'https://www.minecraft.net/download';
+          break;
+        case 'Shadow Fight':
+          window.location.href = 'https://shadowfight.com/install';
+          break;
+        default:
+          alert(`Installation link not available for ${gameName}.`);
+      }
+    }
+  </script>
+</body>
+</html>

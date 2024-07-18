@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Gaming Store</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f0f0f0; margin: 0; padding: 20px;">
+
+  <header style="background-color: #333; color: #fff; padding: 10px 20px;">
+    <h1 style="text-align: center; margin: 0;">Contact Us</h1>
+  </header>
+
+  <div class="container" style="max-width: 800px; margin: 20px auto; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+
+    <form id="contactForm" style="text-align: center;" onsubmit="handleSubmit(event)">
+      <label for="name">Your Name:</label><br>
+      <input type="text" id="name" name="name" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;" required><br>
+
+      <label for="email">Your Email:</label><br>
+      <input type="email" id="email" name="email" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;" required><br>
+
+      <label for="message">Your Message:</label><br>
+      <textarea id="message" name="message" rows="4" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;" required></textarea><br>
+
+      <button type="submit" style="background-color: #007bff; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Submit</button>
+    </form>
+
+    <p id="thankYouMessage" style="text-align: center; font-style: italic; margin-top: 20px; display: none;">
+      Thank you for your message! We'll get back to you as soon as possible.
+    </p>
+
+  </div>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault(); // Prevent the form from submitting
+      document.getElementById('contactForm').style.display = 'none'; // Hide the form
+      document.getElementById('thankYouMessage').style.display = 'block'; // Display the thank you message
+    }
+  </script>
+
+</body>
+</html>
